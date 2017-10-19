@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+    <div class = "panel-heading">
+        <h3 class = "panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Order Pizza Online</a>
+        </h3>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+        <div class="row text-center">
+            <% pizzas.forEach(function(pizza) { %>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <img src="<%= pizza.location%>" alt="<%= pizza.name%>" />                    
+                    <div class="radio">
+                        <input type="checkbox" name="chk_<%= pizza.name%>" value="<%= pizza.name%> $<%= pizza.price %>"><span class="lead"> <%= pizza.name%> $<%= pizza.price %></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="radio-inline"><input type="radio" name="opt_<%= pizza.name%>" value="Small">Small</label>
+                        <label class="radio-inline"><input type="radio" name="opt_<%= pizza.name%>" value="Medium">Medium</label>
+                        <label class="radio-inline"><input type="radio" name="opt_<%= pizza.name%>" value="Large">Large</label>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectpicker" name="toc_<%= pizza.name%>">
+                            <option disabled selected value> -- Select type of crust -- </option>
+                            <option>Traditional</option>
+                            <option>Whole Wheat</option>
+                            <option>Extra-Thin</option>
+                            <option>Gluten-Free</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="selectpicker" name=qty_<%= pizza.name%>">
+                            <option disabled selected value> -- select a quantity -- </option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>                                                                                                   
+                </div>
+            <%})%>
+            <div class="text-center">
+                <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="margin: 10px">NEXT</a>								
+            </div>
+        </div>  
+    </div>
+</div>

@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Capricciosa",
+        "location": "images/capricciosa.png",
+        "price": 15.99
+    },
+    {
+        "name": "Margherita",
+        "location": "images/margherita.png",
+        "price": 17.99
+    },
+    {
+        "name": "Marinara",
+        "location": "images/marinara.png",
+        "price": 13.99
+    },
+    {
+        "name": "Mushroom",
+        "location": "images/mushroom.png",
+        "price": 15.00
+    },
+    {
+        "name": "Pepperoni",
+        "location": "images/pepperoni.png",
+        "price": 20.00
+        
+    },
+    {
+        "name": "Seafood",
+        "location": "images/seafood.png",
+        "price": 25.00
+    }
+]

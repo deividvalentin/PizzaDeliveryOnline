@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza Delivery</title>
+    <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css" />
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./">Pizza Delivery</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./">Home</a></li>
+                    <li><a href="./order">Order</a></li>
+                    <li><a href="./orderlist">Order List</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> 0 Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container jumbotron">
+            <h1><%= message %> - <%= error.status %></h1>
+            <p>
+                <pre><%= error.stack %></pre>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+

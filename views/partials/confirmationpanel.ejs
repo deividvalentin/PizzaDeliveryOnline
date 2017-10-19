@@ -1,0 +1,40 @@
+<div class="jumbotron">
+    <h1>
+        Order Confirmation - <%= order.OrderID %>
+    </h1>
+    <h3>
+        Thanks, <%= order.CustomerFirstName %> <%= order.CustomerLastName %>. Your order will be delivered on
+    </h3>
+    <p>
+        <%= order.OrderExpectedDate %> - 30 minutes
+    </p>               
+    <h3>
+        Delivery to
+    </h3>
+    <p>
+        <%= order.CustomerAddress %>
+    </p>
+    <p>
+        <%= order.CustomerCity %>, <%= order.CustomerPostalCode %>
+    </p>
+    <p>
+        <%= order.CustomerPhone %>
+    </p>
+    <h3>Your order details: </h3>
+    <ul>
+        <% order.OrderItems.forEach(function(item) { %>
+            <li><%= item.itemName %>, <%= item.itemSize %>, <%= item.itemType %>, <%= item.itemQuantity %>, $<%= item.itemPrice %> = Total $ <%= item.itemTotal %></li>
+        <% })%>
+    </ul>
+    <p>
+        Order Total: $<%= order.OrderTotal %> <small>*(taxes included)</small>
+    </p>
+    <p>
+        Payment Method: <%= order.OrderTypePayment %> 
+    </p>
+    <form class="form-group text-center" name="frmPizza" action="orderConfirmation" method="POST">
+        <h3>Please, confirm if the order is right...</h3>
+        <input type="submit" name="btnCancel" value="Cancel" class="btn btn-primary">
+        <input type="submit" name="btnConfirm" value="Confirm" class="btn btn-primary">
+    </form>
+</div>
